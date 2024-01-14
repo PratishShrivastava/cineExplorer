@@ -20,10 +20,13 @@ $text-secondary-color: #ffffff; // sort of .5% used
 .main-card {
   width: 150px;
   height: 300px;
-  margin: .5rem;
+  margin: 0.5rem;
   border: 1px solid #43cbac;
   border-radius: 6px;
   cursor: pointer;
+  -webkit-box-shadow: 10px 10px 20px -12px rgba(67, 203, 172, 0.32);
+  -moz-box-shadow: 10px 10px 20px -12px rgba(67, 203, 172, 0.32);
+  box-shadow: 10px 10px 20px -12px rgba(67, 203, 172, 0.32);
 
   .title-card {
     color: $text-primary-color;
@@ -38,11 +41,12 @@ $text-secondary-color: #ffffff; // sort of .5% used
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-family: Helvetica,Arial,sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
   }
   .title-card p:hover {
     text-decoration: underline;
     text-underline-offset: 3px;
+    color: $text-secondary-color;
   }
   .title-card .rating-card {
     display: flex;
@@ -52,7 +56,7 @@ $text-secondary-color: #ffffff; // sort of .5% used
     position: relative;
     left: 2px;
     font-size: 14px;
-    font-family: Helvetica,Arial,sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
   }
   .title-card .rating-card svg {
     display: none;
@@ -60,6 +64,7 @@ $text-secondary-color: #ffffff; // sort of .5% used
   .title-card .rating-card:hover {
     border-radius: 2px;
     background-color: #ffffff1a;
+    color: $text-secondary-color;
   }
   .img-card {
     text-align: center;
@@ -90,7 +95,14 @@ $text-secondary-color: #ffffff; // sort of .5% used
     padding: 4px 1.6rem;
     border-radius: 4px;
     font-size: 12px;
-    font-family: Helvetica,Arial,sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    transition: opacity 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+  }
+  .view-card button:hover {
+    opacity: 0.8;
+    background-color: $text-secondary-color;
+    color: $primary-color;
   }
 }
 @media only screen and (min-width: 601px) {
@@ -120,7 +132,7 @@ $text-secondary-color: #ffffff; // sort of .5% used
       text-overflow: ellipsis;
     }
     .title-card .rating-card {
-        display: flex;
+      display: flex;
       justify-content: center;
       text-align: center;
       align-items: center;
@@ -183,7 +195,7 @@ $text-secondary-color: #ffffff; // sort of .5% used
       text-overflow: ellipsis;
     }
     .title-card .rating-card {
-        display: flex;
+      display: flex;
       justify-content: center;
       text-align: center;
       align-items: center;
