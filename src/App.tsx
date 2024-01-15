@@ -20,9 +20,10 @@ function App() {
         </div>
       </div>
       <div className="cards">
-        {TopMoive.map((movie) => (
+        {TopMoive.map((movie, index) => (
           <Card
             key={movie.id}
+            index = {++index}
             title={movie.title}
             imageUrl={movie.image}
             rating={movie.rating}

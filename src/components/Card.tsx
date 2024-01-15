@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 interface CardProps {
+  index: any;
   title: string;
   imageUrl: string;
   rating: any;
@@ -8,7 +9,7 @@ interface CardProps {
 
 export default class Card extends Component<CardProps> {
   render() {
-    const { title, imageUrl, rating } = this.props;
+    const { title, imageUrl, rating, index } = this.props;
 
     return (
       <div className="main-card">
@@ -17,7 +18,7 @@ export default class Card extends Component<CardProps> {
             <img src={imageUrl} />
           </div>
           <div className="title-card">
-            <p>{title}</p>
+            <p>{index}. {title}</p>
             <div className="rating-card">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
