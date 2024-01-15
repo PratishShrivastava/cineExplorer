@@ -27,17 +27,17 @@ function App() {
         </div>
       </div>
       <div className="cards">
-        {TopMoive.filter((movie) => movie.title.includes(Filter)).map(
-          (movie, index) => (
-            <Card
-              key={movie.id}
-              index={++index}
-              title={movie.title}
-              imageUrl={movie.image}
-              rating={movie.rating}
-            />
-          )
-        )}
+        {TopMoive.filter((movie) =>
+          movie.title.toLocaleLowerCase().includes(Filter.toLocaleLowerCase())
+        ).map((movie, index) => (
+          <Card
+            key={movie.id}
+            index={++index}
+            title={movie.title}
+            imageUrl={movie.image}
+            rating={movie.rating}
+          />
+        ))}
       </div>
     </>
   );
