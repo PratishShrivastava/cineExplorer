@@ -1,4 +1,5 @@
 import "./App.scss";
+import TopMoive from "./assets/moive.json";
 import Card from "./components/Card";
 
 function App() {
@@ -10,22 +11,23 @@ function App() {
         </div>
         <div>
           <select name="" id="">
-            <option selected value="Select">Select</option>
+            <option selected value="Select">
+              Select
+            </option>
             <option value="moive">moive</option>
             <option value="series">series</option>
           </select>
         </div>
       </div>
       <div className="cards">
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+        {TopMoive.map((movie) => (
+          <Card
+            key={movie.id}
+            title={movie.title}
+            imageUrl={movie.image}
+            rating={movie.rating}
+          />
+        ))}
       </div>
     </>
   );
