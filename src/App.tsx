@@ -1,13 +1,20 @@
+import { useState } from "react";
 import "./App.scss";
 import TopMoive from "./assets/moive.json";
 import Card from "./components/Card";
 
 function App() {
+  const [Filter, FilterSet] = useState("");
   return (
     <>
       <div className="searchAndFilter">
         <div>
-          <input type="text" placeholder="Search" />
+          <input
+            type="text"
+            onChange={(evt) => FilterSet(evt.target.value)}
+            value={Filter}
+            placeholder="Search"
+          />
         </div>
         <div>
           <select name="" id="">
@@ -20,15 +27,17 @@ function App() {
         </div>
       </div>
       <div className="cards">
-        {TopMoive.map((movie, index) => (
-          <Card
-            key={movie.id}
-            index = {++index}
-            title={movie.title}
-            imageUrl={movie.image}
-            rating={movie.rating}
-          />
-        ))}
+        {TopMoive.filter((movie) => movie.title.includes(Filter)).map(
+          (movie, index) => (
+            <Card
+              key={movie.id}
+              index={++index}
+              title={movie.title}
+              imageUrl={movie.image}
+              rating={movie.rating}
+            />
+          )
+        )}
       </div>
     </>
   );
