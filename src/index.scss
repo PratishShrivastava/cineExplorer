@@ -1,5 +1,5 @@
 $primary-color: #191919; // main color
-$action-color: #43CBAC; // call to action
+$action-color: #43cbac; // call to action
 $text-primary-color: #94a3b8; // main text color
 $text-secondary-color: #ffffff; // sort of .5% used
 
@@ -17,4 +17,9 @@ $text-secondary-color: #ffffff; // sort of .5% used
 body {
   background-color: $primary-color;
   color: $text-primary-color;
+}
+
+abbr {
+  text-decoration: none !important;
+  text-transform: none !important;
 }

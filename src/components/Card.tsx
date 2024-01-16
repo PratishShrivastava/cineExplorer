@@ -18,7 +18,9 @@ export default class Card extends Component<CardProps> {
             <img src={imageUrl} />
           </div>
           <div className="title-card">
-            <p>{index}. {title}</p>
+            <p>
+              {index}. {title}
+            </p>
             <div className="rating-card">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

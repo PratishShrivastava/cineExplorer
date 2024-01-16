@@ -7,6 +7,29 @@ $text-secondary-color: #ffffff; // sort of .5% used
   width: 100%;
   text-align: center;
   margin: 3rem 0px;
+
+  .searchField svg {
+    width: 14px;
+    transform: translateX(14.5rem);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .searchField input {
+    width: 15rem;
+    height: 2rem;
+    border: 1px solid $action-color;
+    border-radius: 6px;
+    background: transparent;
+    padding: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: $text-primary-color;
+    box-shadow: 10px 10px 20px -12px rgba(67, 203, 172, 0.32);
+  }
+  .searchField input:focus-visible {
+    border: 1px solid $action-color;
+    outline: none;
+  }
 }
 .cards {
   display: flex;
@@ -16,12 +39,27 @@ $text-secondary-color: #ffffff; // sort of .5% used
   width: 100%;
   align-items: center;
   text-align: center;
+
+  .errormsg {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    color: #f5c518;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    display: flex;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 3rem;
+  }
 }
 .main-card {
   width: 150px;
   height: 300px;
   margin: 0.5rem;
-  border: 1px solid #43cbac;
+  border: 1px solid $action-color;
   border-radius: 6px;
   cursor: pointer;
   -webkit-box-shadow: 10px 10px 20px -12px rgba(67, 203, 172, 0.32);
