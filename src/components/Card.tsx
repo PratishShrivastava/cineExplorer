@@ -5,11 +5,12 @@ interface CardProps {
   title: string;
   imageUrl: string;
   rating: any;
+  imdbLink: any;
 }
 
 export default class Card extends Component<CardProps> {
   render() {
-    const { title, imageUrl, rating, index } = this.props;
+    const { title, imageUrl, rating, index, imdbLink } = this.props;
 
     return (
       <div className="main-card">
@@ -40,7 +41,9 @@ export default class Card extends Component<CardProps> {
         </div>
         <div className="info-card">
           <div className="view-card">
-            <button>View more</button>
+            <a target="_blank" href={imdbLink}>
+              View more
+            </a>
           </div>
         </div>
       </div>

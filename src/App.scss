@@ -126,18 +126,19 @@ $text-secondary-color: #ffffff; // sort of .5% used
   .view-card {
     width: 100%;
   }
-  .view-card button {
+  .view-card a {
     border: 1px solid $action-color;
     background-color: transparent;
     color: $text-primary-color;
     padding: 4px 1.6rem;
     border-radius: 4px;
     font-size: 12px;
+    text-decoration: none;
     font-family: Helvetica, Arial, sans-serif;
     cursor: pointer;
     transition: opacity 0.5s ease, background-color 0.5s ease, color 0.5s ease;
   }
-  .view-card button:hover {
+  .view-card a:hover {
     opacity: 0.8;
     background-color: $text-secondary-color;
     color: $primary-color;
@@ -201,13 +202,14 @@ $text-secondary-color: #ffffff; // sort of .5% used
     .view-card {
       width: 100%;
     }
-    .view-card button {
+    .view-card a {
       border: 1px solid $action-color;
       background-color: transparent;
       color: $text-primary-color;
       padding: 2px 2rem;
       border-radius: 4px;
       font-size: 14px;
+      text-decoration: none;
     }
   }
 }
@@ -264,13 +266,14 @@ $text-secondary-color: #ffffff; // sort of .5% used
     .view-card {
       width: 100%;
     }
-    .view-card button {
+    .view-card a {
       border: 1px solid $action-color;
       background-color: transparent;
       color: $text-primary-color;
       padding: 2px 2rem;
       border-radius: 4px;
       font-size: 14px;
+      text-decoration: none;
     }
   }
 }

@@ -61,6 +61,7 @@ function App() {
               title={movie.title}
               imageUrl={movie.image}
               rating={movie.rating}
+              imdbLink={movie.imdb_link}
             />
           ))
         )}
