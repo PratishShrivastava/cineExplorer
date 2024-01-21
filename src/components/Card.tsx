@@ -8,6 +8,8 @@ interface CardProps {
   imdbLink: any;
 }
 
+// https://image.tmdb.org/t/p/original
+
 export default class Card extends Component<CardProps> {
   render() {
     const { title, imageUrl, rating, index, imdbLink } = this.props;
