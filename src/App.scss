@@ -144,6 +144,12 @@ $text-secondary-color: #ffffff; // sort of .5% used
     color: $primary-color;
   }
 }
+.about{
+  font-family: Helvetica, Arial, sans-serif;
+  position: relative;
+  text-align: center;
+  margin: 6rem;
+}
 @media only screen and (min-width: 601px) {
   .main-card {
     //   width: 250px;
