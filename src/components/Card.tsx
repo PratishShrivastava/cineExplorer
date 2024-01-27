@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 interface CardProps {
   index: any;
@@ -43,9 +44,7 @@ export default class Card extends Component<CardProps> {
         </div>
         <div className="info-card">
           <div className="view-card">
-            <a target="_blank" href={imdbLink}>
-              View more
-            </a>
+          <Link to="/about">View more</Link>
           </div>
         </div>
       </div>
